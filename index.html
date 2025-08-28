@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Patti Hack</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    /* App Header */
+    .app-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .app-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      margin-right: 15px;
+    }
+
+    .app-info h1 {
+      margin: 1;
+      font-size: 22px;
+    }
+
+    .app-info .developer {
+      color: blue;
+      font-size: 14px;
+    }
+
+    .app-info .details {
+      color: gray;
+      font-size: 12px;
+    }
+
+    .stats span {
+      margin-right: 10px;
+      font-size: 12px;
+    }
+
+    /* Install Button */
+    .install-btn {
+      display: block;
+      text-align: center;
+      background: #1976D2;
+      color: white;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Screenshots */
+    .screenshots {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    .screenshots img {
+      width: 180px;
+      height: 320px;
+      border-radius: 10px;
+    }
+
+    /* About Section */
+    .about h2 {
+      margin-bottom: 5px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #f1f1f1;
+      padding: 5px 10px;
+      margin: 5px 5px 0 0;
+      border-radius: 15px;
+      font-size: 12px;
+    }
+
+    /* Ratings & Reviews Section */
+    .reviews {
+      margin-top: 30px;
+    }
+
+    .reviews h2 {
+      margin-bottom: 10px;
+    }
+
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .rating-number {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .rating-stars {
+      color: #FFD700;
+      font-size: 20px;
+    }
+
+    .rating-bars {
+      flex: 1;
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      margin: 3px 0;
+    }
+
+    .bar span {
+      width: 20px;
+      font-size: 12px;
+    }
+
+    .bar-line {
+      flex: 1;
+      height: 8px;
+      background: #ddd;
+      margin-left: 5px;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: #1976D2;
+      border-radius: 5px;
+    }
+
+    /* Individual Review */
+    .review {
+      margin-top: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .review-header h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .review .stars {
+      color: #FFD700;
+      font-size: 14px;
+    }
+
+    .review .date {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .review p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .helpful {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .helpful button {
+      background: #f1f1f1;
+      border: none;
+      padding: 5px 10px;
+      margin: 5px 2px 0 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+      /* ---------- FLOATING BUTTONS ---------- */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .floating-btn a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #0088cc; /* Telegram */
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .floating-btn a:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-btn a.whatsapp {
+      background: #25D366; /* WhatsApp */
+    }
+
+/* ---------- FOOTER ---------- */
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer .social-icons a {
+      color: white;
+      font-size: 30px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #ffcc00;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- App Header -->
+    <div class="app-header">
+      <img src="/app-icon.png" alt="App Icon" class="app-icon">
+      <div class="app-info">
+        <h1>3Patti Hack</h1>
+        <p class="developer">Developer: TP Hacker</p>
+        <p class="details">Contains ads · In-app purchases</p>
+        <div class="stats">
+          <span>⭐ 4.5</span>
+          <span>9 MB</span>
+          <span>Rated for 3+</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Install Button -->
+    <a href="/TPMode.apk" class="install-btn">Install</a>
+
+    <!-- Screenshots -->
+    <div class="screenshots">
+      <img src="/Screenshot1.jpg" alt="Screenshot 1">
+      <img src="/Screenshot2.jpg" alt="Screenshot 2">
+      <img src="/Screenshot3.jpg" alt="Screenshot 3">
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+      <h2>About this hack</h2>
+      <p>
+        100% Working Hack Mod Download And Make Unlimited Join Our Telegram and Whatsapp For New Latest Update.
+      </p>
+    </div>
+
+    <!-- Tags -->
+    <div class="tags">
+      <span>#1 top grossing in casual</span>
+      <span># Hack</span>    <span># Mod</span>     <span># 100% Free</span> <span># 3Patti Hack</span> <span># 3Patti Game</span>
+    </div>
+
+    <!-- Ratings & Reviews -->
+    <div class="reviews">
+      <h2>Ratings and reviews</h2>
+      <div class="rating-summary">
+        <div class="rating-number">4.5</div>
+        <div>
+          <div class="rating-stars">★★★★★</div>
+          <div>5136 reviews</div>
+        </div>
+        <div class="rating-bars">
+          <div class="bar"><span>5</span><div class="bar-line"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="bar"><span>4</span><div class="bar-line"><div class="bar-fill" style="width:10%"></div></div></div>
+          <div class="bar"><span>3</span><div class="bar-line"><div class="bar-fill" style="width:5%"></div></div></div>
+          <div class="bar"><span>2</span><div class="bar-line"><div class="bar-fill" style="width:3%"></div></div></div>
+          <div class="bar"><span>1</span><div class="bar-line"><div class="bar-fill" style="width:2%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Review 1 -->
+      <div class="review">
+        <div class="review-header">
+          <img src="/User1.jpg" alt="User" class="profile-pic">
+          <div>
+            <h3>Alisha Khan</h3>
+            <div class="stars">★★★★★</div>
+            <div class="date">8/20/25</div>
+          </div>
+        </div>
+        <p>mera to loss recover ho gaya </p>
+        <div class="helpful">220 people found this helpful<br>
+          Was this review helpful?
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+
+ <!-- Review 2 -->
+      <div class="review">
+        <div class="review-header">
+          <img src="/User2.jpg" alt="User" class="profile-pic">
+          <div>
+            <h3>Irfan Ali</h3>
+            <div class="stars">★★★★★</div>
+            <div class="date">8/14/25</div>
+          </div>
+        </div>
+        <p>3k deposit kar Kay 10k withdraw kar Lia 😍😍😍</p>
+        <div class="helpful">539 people found this helpful<br>
+          Was this review helpful?
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review">
+        <div class="review-header">
+          <img src="/User3.jpg" alt="User" class="profile-pic">
+          <div>
+            <h3>Fatima Queen</h3>
+            <div class="stars">★★★★★</div>
+            <div class="date">8/13/25</div>
+          </div>
+        </div>
+        <p>100% Working Bhai thanks</p>
+        <div class="helpful">166 people found this helpful<br>
+          Was this review helpful?
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+
+  <!-- Review 4 -->
+      <div class="review">
+        <div class="review-header">
+          <img src="/User4.jpg" alt="User" class="profile-pic">
+          <div>
+            <h3>Khan Baloch</h3>
+            <div class="stars">★★★★★</div>
+            <div class="date">8/11/25</div>
+          </div>
+        </div>
+        <p>Kamal app hai</p>
+        <div class="helpful">166 people found this helpful<br>
+          Was this review helpful?
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-btn">
+    <a href="https://t.me/wingamespk" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://whatsapp.com/channel/0029VbB0nSUEAKW8tJTJVj2a" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+ <!-- FOOTER -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://t.me/wingamespk" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://whatsapp.com/channel/0029VbB0nSUEAKW8tJTJVj2a" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <p>© 2025 TP Hacker. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
